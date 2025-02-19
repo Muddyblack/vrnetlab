@@ -103,7 +103,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--trace', action='store_true', help='enable trace level logging')
     parser.add_argument('--username', default='root', help='Username')
-    parser.add_argument('--password', default='clab@123', help='Password')
+    parser.add_argument('--password', default='!DsB@FN€2024', help='Password')
     parser.add_argument('--hostname', default='genuscreen', help='Router hostname')
     parser.add_argument('--connection-mode', default='tc', help='Connection mode')
 

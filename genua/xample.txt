@@ -1,0 +1,197 @@
+SeaBIOS (version 1.16.3-debian-1.16.3-2)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+BEFCAE60+BEF0AE60 CA00
+                                                                               
+
+
+Booting from DVD/CD...
+CD-ROM: E0
+Loading /6.8/AMD64/CDBOOT
+probing: pc0 com0 mem[639K 3070M 1024M a20=on] 
+disk: fd0 hd0+* cd0
+>> OpenBSD/amd64 CDBOOT 3.52g1
+DSR required on com console.
+switching console to com>> OpenBSD/amd64 CDBOOT 3.52g1
+boot> 0
+
+cannot open cd0a:/etc/random.seed: No such file or directory
+booting cd0a:6.8/amd64/bsd.rd: 5690630+1115144+245792+0+843776+39293952+3072 [332930+128+483936+320461]=0x2e19f38
+entry point at 0xffffffff81001000
+[ using 1138488 bytes of bsd ELF symbol table ]
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+        The Regents of the University of California.  All rights reserved.
+Copyright (c) 1995-2020 OpenBSD. All rights reserved.  https://www.OpenBSD.org
+
+OpenBSD 6.8-stable amd64 (build.0e56a0d021) #0: Thu Jan 18 00:44:04 CET 2024
+    _buildslave@b806.genua.de:/build.0e56a0d021
+real mem = 4278059008 (4079MB)
+avail mem = 4107673600 (3917MB)
+mainbus0 at root
+bios0 at mainbus0
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S3 S4 S5
+acpi0: tables DSDT FACP APIC HPET WAET
+acpi0: wakeup devices
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: 13th Gen Intel(R) Core(TM) i5-13420H, 2611.76 MHz, 06-ba-02, 4294967295
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,SS,HTT,SSE3,PCLMUL,VMX,SSSE3,FMA3,CXS
+cpu0: 64KB 64b/line 2-way I-cache, 64KB 64b/line 2-way D-cache, 512KB 64b/line 16-way L2 cache
+cpu0: ITLB 255 4KB entries direct-mapped, 255 4MB entries direct-mapped
+cpu0: DTLB 255 4KB entries direct-mapped, 255 4MB entries direct-mapped
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 1000MHz
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: 13th Gen Intel(R) Core(TM) i5-13420H, 2611.54 MHz, 06-ba-02, 4294967295
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,SS,HTT,SSE3,PCLMUL,VMX,SSSE3,FMA3,CXS
+cpu1: 64KB 64b/line 2-way I-cache, 64KB 64b/line 2-way D-cache, 512KB 64b/line 16-way L2 cache
+cpu1: ITLB 255 4KB entries direct-mapped, 255 4MB entries direct-mapped
+cpu1: DTLB 255 4KB entries direct-mapped, 255 4MB entries direct-mapped
+cpu1: disabling user TSC (skew=-1638)
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 0 pa 0xfec00000, version 11, 24 pins
+acpihpet0 at acpi0: 100000000 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+"ACPI0006" at acpi0 not configured
+acpipci0 at acpi0 PCI0
+"PNP0A06" at acpi0 not configured
+"PNP0A06" at acpi0 not configured
+"PNP0A06" at acpi0 not configured
+"QEMU0002" at acpi0 not configured
+com0 at acpi0 COM1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+com0: console
+acpicmos0 at acpi0
+"ACPI0010" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!)
+acpicpu1 at acpi0: C1(@1 halt!)
+pvbus0 at mainbus0: KVM
+pvclock0 at pvbus0
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel 82441FX" rev 0x02
+pcib0 at pci0 dev 1 function 0 "Intel 82371SB ISA" rev 0x00
+pciide0 at pci0 dev 1 function 1 "Intel 82371SB IDE" rev 0x00: DMA (unsupported), channel 0 wired to compatibility, channel 1 wired to compy
+pciide0: channel 0 ignored (other hardware responding at addresses)
+pciide0: channel 1 ignored (other hardware responding at addresses)
+piixpm0 at pci0 dev 1 function 3 "Intel 82371AB Power" rev 0x03: apic 0 int 9
+iic0 at piixpm0
+vga1 at pci0 dev 2 function 0 "Bochs VGA" rev 0x02
+wsdisplay at vga1 not configured
+em0 at pci0 dev 3 function 0 "Intel 82540EM" rev 0x03: apic 0 int 11, mac 0x5 phy 0, address 52:54:00:12:34:56
+isa0 at pcib0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0 mux 1
+wdc0 at isa0 port 0x1f0/8 irq 14
+wd0 at wdc0 channel 0 drive 0: <QEMU HARDDISK>
+wd0: 16-sector PIO, LBA48, 20480MB, 41943040 sectors
+wd0(wdc0:0:0): using BIOS timings
+wdc1 at isa0 port 0x170/8 irq 15
+atapiscsi0 at wdc1 channel 0 drive 0
+scsibus0 at atapiscsi0: 2 targets
+cd0 at scsibus0 targ 0 lun 0: <QEMU, QEMU DVD-ROM, 2.5+> removable
+cd0(wdc1:0:0): using BIOS timings
+pcppi0 at isa0 port 0x61
+tmpfsrd0: 37MB ramdisk ready
+dt: 435 probes
+netisr: netisr0 assigned to iocpu
+netisr: netisr1 assigned to stack
+em0: using 1 queue
+softraid0 at root
+scsibus1 at softraid0: 256 targets
+root on tmpfsrd0a swap on tmpfsrd0b dump on tmpfsrd0b
+WARNING: clock gained 397 days
+WARNING: CHECK AND RESET THE DATE!
+tmpfsrd0 detached
+starting ...
+fd0 at fdc0 drive 1: density unknown
+
+  Welcome to the genua appliance installation.
+  The System will be installed on the harddisk wd0.
+  All existing data on this disk will be lost!!!
+
+Are you really sure that you want to proceed? [n] yes
+bps=512 spc=2 res=32 nft=2 mid=0xf8 spt=63 hds=255 hid=64 bsec=262080 bspf=1016 rdcl=2 infs=1 bkbs=2
+
+Do you want to install the 32-bit appliance software? [n] no
+
+
+/dev/rwd0a: file system is clean; not checking
+Unconfigured system
+
+
+
+
+Starting initial configuration of genuos 8.0 build.0e56a0d021
+
+Keyboard mapping? ('de' or 'us') [us] kbd: keyboard mapping set to us
+Fully Qualified Domain Name? (example: host.domain.com) Fully Qualified Domain Name? (example: host.domain.com) Which interface (em0) ? [em 
+Address? [192.0.2.1] 
+Netmask length [24] 
+Media (optional)? 
+Default gateway/router [none] 
+Changing password for root.
+New password:
+Password unchanged.
+Changing password for root.
+New password:
+Retype new password:
+Enable SSH daemon (y/n) ? [n] no
+
+Restrict access to Web-GUI and SSH service (y/n) ? [y] yes
+Admin-ACL network (e.g. 192.168.1.0) ? 
+Admin-ACL netmask length ? [24] 
+Admin-ACL network (e.g. 192.168.1.0) ? 
+Admin-ACL netmask length ? [24] 
+Admin-ACL network (e.g. 192.168.1.0) ? 
+Admin-ACL netmask length ? [24] 
+Admin-ACL network (e.g. 192.168.1.0) ? 
+Admin-ACL netmask length ? [24] 24
+Admin-ACL network (e.g. 192.168.1.0) ? 192.168.1.0
+Admin-ACL netmask length ? [24] 24
+Save configuration to disk (y/n) ? [n] n
+generating SSL certificate...
+waiting for system entropy sources (up to 400 seconds).
+typing on the keyboard will contribute to the total entropy:
+estimated entropy is 486 after 34 seconds...
+
+waiting for system entropy sources (up to 400 seconds).
+typing on the keyboard will contribute to the total entropy:
+estimated entropy is 486 after 399 seconds...
+still not enough randomness
+Not enough randomness. Do you want to wait for more? (y/n) ? [y] no
+
+
+
+
+WARNING: config.licenses: No license key specified
+kbd: keyboard mapping set to us
+boot loader is already up to date
+updating random seed.
+sysctl: Invalid argument
+pf: started
+pf enabled
+net.inet.carp.preempt: 0 -> 1
+net.inet.carp.log: 2 -> 4
+net.inet.ip.forwarding: 0 -> 1
+net.inet6.ip6.forwarding: 0 -> 0
+net.inet6.ip6.enable: 0 -> 0
+genua.prioritize_tos: 0 -> 0
+starting network
+waiting for system entropy sources (up to 20 seconds).
+typing on the keyboard will contribute to the total entropy:
+estimated entropy is 507 after 19 seconds...
+still not enough randomness
+starting services: syslogd@0 pfsyslog pflog2sqld slowcgi httpd@0 cron.
+
+genua/amd64 (no) (tty00)
+
+login: 
+
+
+
+

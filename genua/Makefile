@@ -9,3 +9,10 @@ VERSION=$(shell echo $(IMAGE) | sed -e 's/genuscreen-\(.*\)\.qcow2/\1/')
 
 -include ../makefile-sanity.include
 -include ../makefile.include
+
+ifeq ($(INSTALL),false)
+$(info Install mode disabled)
+else
+$(info Install mode enabled)
+-include ../makefile-install.include
+endif
