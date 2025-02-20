@@ -6,8 +6,11 @@ import os
 import re
 import signal
 import sys
+import time
 
 import vrnetlab
+
+INSTALL_CONFIG_FILE = "./config.yml"
 
 def handle_SIGCHLD(signal, frame):
     os.waitpid(-1, os.WNOHANG)
@@ -23,6 +26,7 @@ TRACE_LEVEL_NUM = 9
 logging.addLevelName(TRACE_LEVEL_NUM, "TRACE")
 
 def trace(self, message, *args, **kws):
+    # Yes, logger takes its '*args' as 'args'.
     if self.isEnabledFor(TRACE_LEVEL_NUM):
         self._log(TRACE_LEVEL_NUM, message, args, **kws)
 
@@ -97,6 +101,22 @@ class GENUSCREEN(vrnetlab.VR):
     def __init__(self, hostname, username, password):
         super(GENUSCREEN, self).__init__(username, password)
         self.vms = [ GENUSCREEN_vm(hostname, username, password) ]
+
+class GENUSCREEN_INSTALLER(GENUSCREEN):
+    """GENUSCREEN installer class"""
+
+    def __init__(self, hostname, username, password):
+        super(GENUSCREEN_INSTALLER, self).__init__(username, password)
+        self.vms = [
+            GENUSCREEN_vm(hostname, username, password) 
+        ]
+    
+    def install(self):
+        self.logger.info("Starting GENUSCREEN installer")
+        genu = self.vms[0]
+        while not genu.running:
+            genu.work()
+        genu.stop()
 
 if __name__ == '__main__':
     import argparse
