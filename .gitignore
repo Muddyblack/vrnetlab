@@ -8,6 +8,9 @@ cisco*.bin
 *.vmdk
 *.iso
 *cidfile
+*config.yml
+*.exp
+
 
 .DS_Store
 */.DS_Store
@@ -15,6 +18,7 @@ cisco*.bin
 # These are files that get built by make and should not be checked in to the repo
 **/healthcheck.py
 **/vrnetlab.py
+built-image-sha-*
 # Still allow for the common python scripts
 !common/healthcheck.py
 !common/vrnetlab.py
