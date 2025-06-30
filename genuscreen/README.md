@@ -2,8 +2,6 @@
 
 This is the vrnetlab docker image for Genua genuscreen firewall appliances.
 
-> Available as `vr-genuscreen`.
-
 ## Building the docker image
 
 Download the genuscreen ISO image and place it in this directory. The expected naming format is:
@@ -11,7 +9,7 @@ Download the genuscreen ISO image and place it in this directory. The expected n
 - `genuscreen-1.0.0.iso`
 - `genuscreen-2.1.3.iso`
 
-After placing the ISO file, run `make` to build the docker image. The resulting image will be called `vrnetlab/vr-genuscreen:X.Y.Z` where X.Y.Z matches the version from the ISO filename.
+After placing the ISO file, run `make` to build the docker image. The resulting image will be called `vrnetlab/genua_genuscreen:X.Y.Z` where X.Y.Z matches the version from the ISO filename.
 
 ## Installation Process
 
@@ -38,13 +36,13 @@ topology:
   nodes:
     gw1:
       kind: vr-genuscreen
-      image: vrnetlab/vr-genuscreen:8.0
+      image: vrnetlab/genua_genuscreen:8.0
 ```
 
 ### Manual docker run
 
 ```bash
-docker run -d --privileged --name my-genuscreen vr-genuscreen:8.0
+docker run -d --privileged --name my-genuscreen vrnetlab/genuscreen:8.0
 ```
 
 ## Configuration
