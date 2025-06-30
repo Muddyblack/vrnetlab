@@ -42,7 +42,7 @@ topology:
 ### Manual docker run
 
 ```bash
-docker run -d --privileged --name my-genuscreen vrnetlab/genuscreen:8.0
+docker run -d --privileged --name my-genuscreen vrnetlab/genua_genuscreen:8.0
 ```
 
 ## Configuration
